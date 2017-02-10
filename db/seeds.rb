@@ -1,3 +1,11 @@
+3.times do |topic|
+  Topic.create!(
+      title: "Topic #{topic}"
+    )
+end
+
+puts "3 Topics created"
+
 10.times do |blog|
   Blog.create!(
       title: "MY Blog Post #{blog}",
@@ -11,7 +19,8 @@
 佐山　なるほど。先駆者ですね。
 堀江　そうなんです。僕はわざとそうしているんですよ。
 みんながこれから生きていく未来を先に体現していると、あとから来る人のお手本になるから。
-そうすると、比較的有利な立場になるというだけの話です."
+そうすると、比較的有利な立場になるというだけの話です.",
+topic_id: Topic.last.id
     )
 end
 
@@ -26,10 +35,20 @@ end
 
 puts "5 skills created"
 
-9.times do |portfolio_item|
+8.times do |portfolio_item|
   Portfolio.create!(
       title: "Portfolio title #{portfolio_item}",
       subtitle: "My great service",
+      body: "こんにちは",
+      main_image: "http://placehold.it/600×400",
+      thumb_image: "http://placehold.it/350×200"
+    )
+end
+
+1.times do |portfolio_item|
+  Portfolio.create!(
+      title: "Portfolio title #{portfolio_item}",
+      subtitle: "Ruby on Rails",
       body: "こんにちは",
       main_image: "http://placehold.it/600×400",
       thumb_image: "http://placehold.it/350×200"
