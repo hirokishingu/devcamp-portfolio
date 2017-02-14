@@ -72,7 +72,8 @@ gem "dotenv-rails", "~> 2.1", ">= 2.1.2"
 gem "gritter", "~> 1.2"
 gem "twitter", "~> 6.1"
 gem "redis", "~> 3.3", ">= 3.3.3"
-
+gem "redcarpet"
+gem "coderay"
 
 
 
