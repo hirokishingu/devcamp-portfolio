@@ -1,4 +1,4 @@
-<div class="app-card-container">
+<div class="app-card-container contact-top">
 
   <div class="card">
     <h1>About Me</h1>
@@ -9,6 +9,23 @@
       <div class="col-md-5">
 
         <%= image_tag "SAYA1.jpg", width: 300, alt: "profile image", class: "profile-img" %>
+
+        <div class="skills">
+          <% @skills.each do |skill| %>
+          <div class="skill">
+            <h4><%= skill.title %></h4>
+              <div class="progress">
+                <div class="progress-bar progress-striped bg-warning"
+                   role="progressbar"
+                   aria-valuenow="<%= skill.percent_utilized %>"
+                   aria-valuemax="100"
+                   style="width: <%= skill.percent_utilized %>%"
+                   ></div>
+              </div>
+            </div>
+          <% end %>
+
+        </div>
 
       </div>
 
